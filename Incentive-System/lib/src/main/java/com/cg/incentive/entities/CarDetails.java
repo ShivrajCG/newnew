@@ -21,7 +21,6 @@ public class CarDetails {
 	private double carprice;
 	@Column(name = "specification", length = 100)
 	private String carspecifications;
-
 	public int getCarChassisNumber() {
 		return carChassisNo;
 	}
@@ -52,6 +51,12 @@ public class CarDetails {
 
 	public void setSpecifications(String specifications) {
 		this.carspecifications = specifications;
+	}
+
+	@Override
+	public String toString() {
+		return "CarDetails [carChassisNo=" + carChassisNo + ", carModel=" + carModel + ", carprice=" + carprice
+				+ ", carspecifications=" + carspecifications + "]";
 	}
 
 }
